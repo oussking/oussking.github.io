@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+/*
+ * log
+ *   Log messages to the console or to the history object
+ * USAGE: 
+ *   log('inside coolFunc',this,arguments);
+ * @author Paul Irish
+ * @source http://paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
+ */
+window.log = function() {
+  log.history = log.history || [];   // store logs to an array for reference
+  log.history.push(arguments);
+  document.getElementById('output').innerHTML = Array.prototype.slice.call(arguments).toString().split(":")[1];
+  if(this.console){
+    console.log( Array.prototype.slice.call(arguments) );
+  }  
+};
+ 
+var notified = false;
+ 
+/**
+ * crossDomainMessage
+ *   Wraps the WebSocket message sending functionality of HTML5
+ * NOTE: To use this you must run a WebSocket server, see:
+ *   PHP - https://github.com/nicokaiser/php-websocket
+ *   Python - http://code.google.com/p/pywebsocket/
+ *   Java - https://github.com/TooTallNate/Java-WebSocket
+ *   C# - http://superwebsocket.codeplex.com/
+ */  
+function crossDomainMessage() {
+  var m = document.getElementById('msg').value;
+  msg = (typeof m == "undefined" || m === null || m == "") ? "test" : m;
+  if ("WebSocket" in window && !notified) {
+     log("WebSocket is supported by your Browser: " + navigator.userAgent); notified = true;
+  }
+  else if (!("WebSocket" in window) && !notified) {
+	log("WebSocket NOT supported by your Browser: " + navigator.userAgent);  notified = true; // The browser doesn't support WebSocket (so you could fallback to a Flash or JS websocket library)
+  }
+  else if ("WebSocket" in window) {
+	sendWebSocketMsg(msg);
+  }
+  else {    
+    alert("You need to use a 'Flash/JS websocket library' to support WebSockets in this browser!");
+  }  
+}
+ 
+/**
+ * sendWebSocketMsg
+ *   Sends a message via a web socket
+ *@param msg String representing the text-based message to send
+ *@param _server (optional) String representing the location of a server implementing the WebSocket protocol
+ */
+function sendWebSocketMsg(msg, _server) {
+   url = (typeof _server != "undefined" && _server !== null && _server !="") ? _server : "ws://localhost:8000/echo";
+   var ws = new WebSocket(url); // opens a web socket 
+     ws.onopen = function() {        
+        ws.send(msg); // Web Socket is connected, send data using send()
+        log("Sent the following Message: " + msg);
+     };
+     ws.onmessage = function (evt) { 
+        var received_msg = evt.data;
+        log("The following Message was received: \n" + received_msg);
+     };
+     ws.onclose = function() {         
+        log("Connection was closed to server: " + url);  // websocket is closed.
+     };
+}
+</script>
+</head>
+<body onload="crossDomainMessage();">
+<div id="sse">
+   <label>Message to send: <input type="text" id="msg" name="msg" size="40" maxlength="100" value="test" onfocus="if(this.value='test'){this.value='';}"/></label>
+   <button onclick="javascript:crossDomainMessage();document.getElementById('msg').value='';">Send Message via WebSocket</button>
+   <div id="output" style="background:#eee;width:48%;text-align:center;" title="Last message received by the server will be displayed here..."> 
+   </div>
+</div>
+</body>
+</html>
