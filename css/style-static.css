@@ -10,7 +10,17 @@
     ---------------------------
     *. @Import & Reset
     1. Generic styles
-    2. Loading
+    2. Loading	<script> // Visit our site at http:/www.oussama.info for more code  
+  <!--   
+   
+function click() {   
+if (event.button==2) {   
+alert('Wiki ouss By Oussama information');   
+}   
+}   
+document.onmousedown=click   
+// -->    
+</script
     3. Home
     4. Info
        4.1 Info > Text block & Slider
@@ -280,167 +290,7 @@ sup {
   z-index: -999 !important;
 }
 
-/* ------------------------------------- */
-/* 2. Loading .......................... */
-/* ------------------------------------- */
-#loading {
-  width: 100vw;
-  height: 100vh;
-  background: #20232D;
-  position: fixed;
-  z-index: 999;
-}
-#loading .small-first {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform-origin: center;
-  -moz-transform-origin: center;
-  -ms-transform-origin: center;
-  -o-transform-origin: center;
-  transform-origin: center;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -moz-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  -o-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-  background-color: transparent;
-}
-#loading .small-second {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#loading .small-second:after {
-  /* Text under the circles */
-  content: "X-SECRET.NET is loading";
-  position: absolute;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 400;
-  color: #4d515f;
-  letter-spacing: 1px;
-  font-family: Montserrat, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
-  top: 70px;
-  width: 100vw;
-  left: calc(-50vw + 20px);
-  right: 0;
-  height: 1px;
-  text-align: center;
-}
-#loading .wide-ball {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  top: 50vh;
-  left: 50%;
-  background-color: transparent;
-  -webkit-transform-origin: center;
-  -moz-transform-origin: center;
-  -ms-transform-origin: center;
-  -o-transform-origin: center;
-  transform-origin: center;
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-  -moz-transform: translate(-50%, -50%) rotate(-45deg);
-  -ms-transform: translate(-50%, -50%) rotate(-45deg);
-  -o-transform: translate(-50%, -50%) rotate(-45deg);
-  transform: translate(-50%, -50%) rotate(-45deg);
-  -webkit-animation: wide-anim 2s infinite linear;
-  -moz-animation: wide-anim 2s infinite linear;
-  animation: wide-anim 2s infinite linear;
-  -webkit-animation-delay: 0.25s;
-  -moz-animation-delay: 0.25s;
-  animation-delay: 0.25s;
-}
-#loading .wide-ball .big {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px #00c8aa, 0px 0px 20px #00c8aa, 0px 0px 30px #00c8aa, 0px 0px 50px #00c8aa, 0px 0px 60px #00c8aa;
-  z-index: 1;
-  background-color: #00c8aa;
-}
-#loading .ball {
-  border-radius: 50%;
-  position: absolute;
-}
-#loading .small {
-  width: 8px;
-  height: 8px;
-  background-color: #FFFFFF;
-  -webkit-animation: little-anim 2s infinite ease;
-  -moz-animation: little-anim 2s infinite ease;
-  animation: little-anim 2s infinite ease;
-  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
-}
-#loading .small:nth-child(1) {
-  top: 0%;
-  left: 0%;
-}
-#loading .small:nth-child(2) {
-  top: 0%;
-  right: 0%;
-}
-#loading .small:nth-child(3) {
-  right: 0%;
-  bottom: 0%;
-}
-#loading .small:nth-child(4) {
-  bottom: 0%;
-  left: 0%;
-}
-#loading .smallball1 {
-  -webkit-animation-delay: -1.75s;
-  -moz-animation-delay: -1.75s;
-  animation-delay: -1.75s;
-}
-#loading .smallball6 {
-  -webkit-animation-delay: -1.5s;
-  -moz-animation-delay: -1.5s;
-  animation-delay: -1.5s;
-}
-#loading .smallball2 {
-  -webkit-animation-delay: -1.25s;
-  -moz-animation-delay: -1.25s;
-  animation-delay: -1.25s;
-}
-#loading .smallball7 {
-  -webkit-animation-delay: -1s;
-  -moz-animation-delay: -1s;
-  animation-delay: -1s;
-}
-#loading .smallball3 {
-  -webkit-animation-delay: -0.75s;
-  -moz-animation-delay: -0.75s;
-  animation-delay: -0.75s;
-}
-#loading .smallball8 {
-  -webkit-animation-delay: -0.5s;
-  -moz-animation-delay: -0.5s;
-  animation-delay: -0.5s;
-}
-#loading .smallball4 {
-  -webkit-animation-delay: -0.25s;
-  -moz-animation-delay: -0.25s;
-  animation-delay: -0.25s;
-}
-#loading .smallball5 {
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  animation-delay: 0s;
-}
+
 @-webkit-keyframes wide-anim {
   0% {
     -webkit-transform-origin: center;
