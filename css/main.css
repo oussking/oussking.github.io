@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+    url('../fonts/OpenSans-Light.woff') format('woff'),
+    url('../fonts/OpenSans-Light.html') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'),
+    url('../fonts/OpenSans.woff') format('woff'),
+    url('../fonts/OpenSans.html') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff'),
+    url('../fonts/OpenSans-Semibold.html') format('truetype');
+}
+
+body {
+    background: transparent url(../img/body-bg.png) scroll repeat top left;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+h2 { font-weight: normal; }
+
+.center {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+}
+
+.btn-big {
+    font-size: 17px !important;
+    padding: 11px 25px !important;
+}
+
+.hr {
+    border-top: 1px solid #F5F5F5;
+    border-bottom: 2px solid #fff;
+}
+
+/* buttons */
+.btn-success{
+    background-color: #518E30 !important;
+}
+
+/* navbar */
+.navbar {
+    background: none #EEEEEE;
+    margin-bottom: 0;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    border-radius: 0;
+}
+
+.navbar a.navbar-brand img{
+    height: 40px;
+    margin-top: -10px;
+}
+
+.navbar .nav > li > a {
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.social {
+    position: absolute;
+    top: 15px;
+    right: 45px;
+}
+
+.social li {
+    list-style: none;
+    float: left;
+}
+
+#likeArrow {
+    background: url('../img/arrow-red.png') no-repeat 0 0 transparent;
+    width: 129px;
+    height: 72px;
+    position: absolute;
+    right: 200px;
+    top: 40px;
+}
+/* end navbar */
+
+.well {
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.standart-h2title {
+    font-size: 160%;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+.line2 {
+    border-bottom: 4px solid #EE6123;
+    display: block;
+    margin: 10px 0px 30px;
+    padding-bottom: 3px;
+}
+
+.mainContainer {
+    margin-top: 70px;
+}
+
+#header h1 {
+    margin: 45px auto;
+    text-align: center;
+    text-shadow: 0px 0px 1px #fff;
+    /*font-weight: normal;*/
+}
+
+#header h1 a {
+    /*font-family: 'courier new';*/
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 65px;
+}
+
+#homeContent {
+    padding-top: 100px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #939393;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette {
+    padding-top: 60px; /* Vertically center images part 1: add padding above and below text. */
+    overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+
+.featurette-image {
+    margin-top: -60px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.section_header {
+    text-align: center;
+    font-weight: 300;
+    color: #252b34;
+    margin-top: 80px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section_header hr {
+    width: 36%;
+    position: absolute;
+}
+
+.section_header span {
+    width: 27%;
+    display: block;
+    margin: 0 auto;
+}
+
+.section_header hr.right {
+    right: 0px;
+    top: 0px;
+}
+
+.section_header hr.left {
+}
+
+/* Help and FAQ */
+#faqPage h2 a {
+    text-decoration: none;
+    color: #333333;
+}
+
+/* Contact */
+#contact {
+    margin-top: 70px;
+}
+
+#contact .headline h3 {
+    font-weight: normal !important;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#contact p {
+    color: #939394;
+    font-style: italic;
+}
+
+@media(max-width: 500px) {
+    #homeContent {
+        padding-top: 0px;
+    }
+
+    #addressForm button[type="submit"]{
+        padding: 4px!important;
+    }
+
+    .popoverLink {
+        margin-top: 7px;
+    }
+}
