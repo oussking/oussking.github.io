@@ -1,40 +1,148 @@
-<script>function calculateAdSize(ad, sizes) { var aw = ad.getBoundingClientRect().width; var ah = ad.getBoundingClientRect().height; if (!ad.getBoundingClientRect().width) { aw = ad.offsetWidth; ah = ad.offsetHeight; } var cs = ['','','']; for (var i = 0; i < sizes.length; i++) { var pw = sizes[i][0]; var ph = sizes[i][1]; var mw = pw-(aw<=20 ? pw : aw); var mh = ph-(ah<=20 ? ph : ah); if (cs[0]=='' || cs[1]=='') { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } if (mw==0 && mh==0 && (aw!=0 || ah!=0)) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; break; } else if (Math.abs(mw)<=Math.abs(cs[2]) && Math.abs(mh)<=Math.abs(cs[3]) && mw<50 && mh<50) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } else if ((aw>ah && pw>ph && cs[0]<cs[1]) || (ah>aw && ph>pw && cs[1]<cs[0])) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } } return cs.slice(0, -2); }</script><div id='homeAdvert' style='position: fixed; left: 15px; bottom: 10px; width:468px; height:60px;'><script>var ad = document.getElementById('homeAdvert'); var v = ''; var size = calculateAdSize(ad,[[120,600],[160,600],[250,250],[300,250],[300,600],[315,300],[468,60],[728,90]]); var ad_width = size[0], ad_height = size[1],
-    ad_idzone='2385'+(size[0]==120 ? '433' : (size[0]==160 ? '435' : (size[0]==250 ? '431' : (size.toString()==[300,250].toString() ? '395' : (size.toString()==[300,600].toString() ? '437' : (size[0]==315 ? '429' : (size[0]==468 ? '391' : (size[0]==728 ? '393' : '391'))))))));</script>
-    <script src='https://ads.exdynsrv.com/ads.js'></script><noscript><a href='http://main.exdynsrv.com/img-click.php?idzone=2385391' target='_blank'><img src='https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=2385391&output=img&type=468x60' width='468' height='60'></a></noscript></div><html>
-    <head>
-        <title>By Oussama information</title>
-        <link rel="stylesheet" type="text/css" href="http://atdz.tk/user/img/a.abd.css">
-	<meta name="viewport" content="width=650">
-    </head>
+<!doctype html>
+<html>
+<head>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <body>
-     
+        ga('create', 'UA-10701068-1', 'auto');
+        ga('send', 'pageview');
+        ga('send', 'event', 'error-page', 'open', 'website-sleeping');
+    </script>
+    <meta charset=utf-8>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
+    <meta name="HandheldFriendly" content="True">
+    <titl>By Oussama information</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.rawgit.com/000webhost/logo/master/favicon.ico">
+    <style>html, body {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: #F7F8FB;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .message {
+        text-align: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+        max-width: 450px;
+    }
+
+    .message__title {
+        font-size: 22px;
+        font-weight: 100;
+        margin-top: 15px;
+        color: #47494E;
+        margin-bottom: 8px;
+    }
+
+    p {
+        -webkit-margin-after: 0px;
+        -webkit-margin-before: 0px;
+        font-size: 15px;
+        color: #7F828B;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #7F828B;
+        border: 1px solid #7F828B;
+    }
+
+    .hk-logo, .app-icon {
+        fill: #DBE1EC;
+    }
+
+    .info {
+        fill: #9FABBC;
+    }
+
+    body.friendly {
+        background: -webkit-linear-gradient(-45deg, #b80303 0%, #000 100%);
+        background: linear-gradient(135deg, #b80303 0%, #000 100%);
+    }
+
+    body.friendly .message__title {
+        color: #fff;
+    }
+
+    body.friendly p {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    body.friendly .hk-logo, body.friendly .app-icon {
+        fill: rgba(255, 255, 255, 0.9);
+    }
+
+    body.friendly .info {
+        fill: rgba(255, 255, 255, 0.9);
+    }
+
+    body.friendly .btn {
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .info_area {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .logo {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+    }
+    #footer {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+<div class=spacer></div>
+<div class=message>
+    <div class=message__title>عبد رحمان انيس</div>
+    <p>بروكسي انترنت مجاني</p>
+    <div class=logo>
+        <img src="https://raw.githubusercontent.com/000webhost/logo/d1cf5cdf/000webhost-logo-forum-33x33.png" alt="000webhost">
+    </div>
+    <div class=info_area><a href="https://www.000webhost.com/website-faq/search/website+sleeping?utm_source=000&utm_medium=website-sleeping&utm_campaign=pages" target=_blank>
+        <svg width=24 height=24 xmlns="http://www.w3.org/2000/svg"><path d="M12 24c6.6274 0 12-5.3726 12-12S18.6274 0 12 0 0 5.3726 0 12s5.3726 12 12 12zm0-1.25c5.937 0 10.75-4.813 10.75-10.75S17.937 1.25 12 1.25 1.25 6.063 1.25 12 6.063 22.75 12 22.75zM12.9653 8C12.0593 8 11.5 7.25 11.5 6.519c0-.824.6805-1.519 1.587-1.519 1.0465 0 1.413.7506 1.413 1.3728C14.5005 7.396 13.7682 8 12.9653 8zM9.3 18.021c.3237-2.1306 1.5255-4.9562 1.772-6.6087l-1.2013-.043c0-.6092 0-1.1962.0155-1.7824C11.0566 9.3907 12.6125 9 12.89 9c.123 0 .585.565.724.8913-.277 1.8268-1.7406 6.174-1.864 6.979-.0156.087-.0156.1742.0467.1742.1534 0 .5543-.087.9856-.218.031.566.0772 1.1304.1076 1.6962-.6934.282-1.541.4773-2.8654.4773-.1235 0-.6165-.6094-.7246-.979z" class=info fill-rule=evenodd /></svg>
+    </a></div>
+    <a href="https://www.0.freebasics.com/http/www.ouss-ama.gq/~opuvrvxf/r.php?nin_u=czovL3d3dy5nb29nbGUuY29tLz9nd3NfcmQ9c3Ns&nin_b=1" class=btn>Google</a></div>
 
 
-        <div id="recentlyViewed" style="display:none;">
-            <span onclick="document.getElementById('recentlyViewed').style.display = 'none';" style="cursor:pointer; float: right;">X</span>
-                        <h2 style="margin-top:0; margin-bottom:14px;">Pages Viewed Today (Total - 6616 By 15 Users):</h2>
-            <div id='tableParent' style='max-height: 500px; overflow-y: auto;'><table><thead><td><b>Website</b></td><td><b>View Count</b></td></thead><tr><td style='padding-right: 80px;'>intel.com</td><td>33</td></tr><tr><td style='padding-right: 80px;'>google-analytics.com</td><td>143</td></tr><tr><td style='padding-right: 80px;'>pcgamer.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>onesignal.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>oath.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>future-fie-assets.co.uk</td><td>10</td></tr><tr><td style='padding-right: 80px;'>futurecdn.net</td><td>62</td></tr><tr><td style='padding-right: 80px;'>skimresources.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>google.com</td><td>218</td></tr><tr><td style='padding-right: 80px;'>consensu.org</td><td>7</td></tr><tr><td style='padding-right: 80px;'>google.ae</td><td>2</td></tr><tr><td style='padding-right: 80px;'>taboola.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>googletagmanager.com</td><td>28</td></tr><tr><td style='padding-right: 80px;'>facebook.net</td><td>11</td></tr><tr><td style='padding-right: 80px;'>facebook.com</td><td>84</td></tr><tr><td style='padding-right: 80px;'>reddit.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>redditstatic.com</td><td>129</td></tr><tr><td style='padding-right: 80px;'>redditmedia.com</td><td>15</td></tr><tr><td style='padding-right: 80px;'>youtube.com</td><td>15</td></tr><tr><td style='padding-right: 80px;'>doubleclick.net</td><td>93</td></tr><tr><td style='padding-right: 80px;'>613tube.com</td><td>6</td></tr><tr><td style='padding-right: 80px;'>googleapis.com</td><td>27</td></tr><tr><td style='padding-right: 80px;'>stackoverflow.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>gravatar.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>sstatic.net</td><td>5</td></tr><tr><td style='padding-right: 80px;'>imgur.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>gstatic.com</td><td>126</td></tr><tr><td style='padding-right: 80px;'>ytimg.com</td><td>12</td></tr><tr><td style='padding-right: 80px;'>ggpht.com</td><td>9</td></tr><tr><td style='padding-right: 80px;'>planitgreenlive.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>googulator.com</td><td>24</td></tr><tr><td style='padding-right: 80px;'>amazonaws.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>pushbullet.com</td><td>3</td></tr><tr><td style='padding-right: 80px;'>xboxdvr.com</td><td>540</td></tr><tr><td style='padding-right: 80px;'>vntsm.com</td><td>100</td></tr><tr><td style='padding-right: 80px;'>zencdn.net</td><td>54</td></tr><tr><td style='padding-right: 80px;'>xboxlive.com</td><td>105</td></tr><tr><td style='padding-right: 80px;'>adnxs.com</td><td>210</td></tr><tr><td style='padding-right: 80px;'>casalemedia.com</td><td>173</td></tr><tr><td style='padding-right: 80px;'>rubiconproject.com</td><td>554</td></tr><tr><td style='padding-right: 80px;'>sonobi.com</td><td>173</td></tr><tr><td style='padding-right: 80px;'>cloudflare.com</td><td>48</td></tr><tr><td style='padding-right: 80px;'>googletagservices.com</td><td>114</td></tr><tr><td style='padding-right: 80px;'>vdna-assets.com</td><td>34</td></tr><tr><td style='padding-right: 80px;'>dropbox.com</td><td>25</td></tr><tr><td style='padding-right: 80px;'>exelator.com</td><td>76</td></tr><tr><td style='padding-right: 80px;'>t.co</td><td>15</td></tr><tr><td style='padding-right: 80px;'>twitter.com</td><td>105</td></tr><tr><td style='padding-right: 80px;'>neocities.org</td><td>377</td></tr><tr><td style='padding-right: 80px;'>jquery.com</td><td>50</td></tr><tr><td style='padding-right: 80px;'>clips4sale.com</td><td>910</td></tr><tr><td style='padding-right: 80px;'>ads-twitter.com</td><td>3</td></tr><tr><td style='padding-right: 80px;'>andkon.com</td><td>84</td></tr><tr><td style='padding-right: 80px;'>quantserve.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>exponential.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>fortnitetracker.com</td><td>34</td></tr><tr><td style='padding-right: 80px;'>ionicframework.com</td><td>8</td></tr><tr><td style='padding-right: 80px;'>thetrackernetwork.com</td><td>57</td></tr><tr><td style='padding-right: 80px;'>nexocams.com</td><td>55</td></tr><tr><td style='padding-right: 80px;'>discordapp.com</td><td>110</td></tr><tr><td style='padding-right: 80px;'>apple.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>cloudfront.net</td><td>113</td></tr><tr><td style='padding-right: 80px;'>alexametrics.com</td><td>13</td></tr><tr><td style='padding-right: 80px;'>trackercdn.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>amazon-adsystem.com</td><td>6</td></tr><tr><td style='padding-right: 80px;'>ninjakiwi.com</td><td>16</td></tr><tr><td style='padding-right: 80px;'>nkstatic.com</td><td>103</td></tr><tr><td style='padding-right: 80px;'>cpmstar.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>addthis.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>btd6.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>ovh.net</td><td>1</td></tr><tr><td style='padding-right: 80px;'>adobe.com</td><td>28</td></tr><tr><td style='padding-right: 80px;'>adobedtm.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>rockstargames.com</td><td>19</td></tr><tr><td style='padding-right: 80px;'>rsg.sc</td><td>63</td></tr><tr><td style='padding-right: 80px;'>signin-s.rsg.sc</td><td>8</td></tr><tr><td style='padding-right: 80px;'>myseeyou.com</td><td>20</td></tr><tr><td style='padding-right: 80px;'>game-solver.com</td><td>189</td></tr><tr><td style='padding-right: 80px;'>s0.wp.com</td><td>82</td></tr><tr><td style='padding-right: 80px;'>fbcdn.net</td><td>82</td></tr><tr><td style='padding-right: 80px;'>i2.wp.com</td><td>72</td></tr><tr><td style='padding-right: 80px;'>i0.wp.com</td><td>36</td></tr><tr><td style='padding-right: 80px;'>i1.wp.com</td><td>12</td></tr><tr><td style='padding-right: 80px;'>stats.wp.com</td><td>82</td></tr><tr><td style='padding-right: 80px;'>champion.gg</td><td>19</td></tr><tr><td style='padding-right: 80px;'>indexww.com</td><td>5</td></tr><tr><td style='padding-right: 80px;'>videoplayerhub.com</td><td>5</td></tr><tr><td style='padding-right: 80px;'>zeroidtech.com</td><td>5</td></tr><tr><td style='padding-right: 80px;'>leagueoflegends.com</td><td>30</td></tr><tr><td style='padding-right: 80px;'>iconfinder.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>pingdom.net</td><td>6</td></tr><tr><td style='padding-right: 80px;'>hotjar.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>ad-delivery.net</td><td>2</td></tr><tr><td style='padding-right: 80px;'>cdnjquery.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>pornhub.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>phncdn.com</td><td>26</td></tr><tr><td style='padding-right: 80px;'>roblox.com</td><td>77</td></tr><tr><td style='padding-right: 80px;'>rbxcdn.com</td><td>239</td></tr><tr><td style='padding-right: 80px;'>aspnetcdn.com</td><td>20</td></tr><tr><td style='padding-right: 80px;'>funcaptcha.com</td><td>12</td></tr><tr><td style='padding-right: 80px;'>gigya.com</td><td>3</td></tr><tr><td style='padding-right: 80px;'>c4slive.com</td><td>3</td></tr><tr><td style='padding-right: 80px;'>totaljerkface.com</td><td>95</td></tr></table></div>        </div>
 
-        <div id="container">
-            <a href="http://bid.unbid.bid/" id="header">عبد رحمان انيس</a>
-            <div id="textbox">
-                <script>function goToPage() { event.preventDefault(); var URL = document.getElementsByName('cdURL')[0].value; if (URL!='') { window.location = '?cdURL=' + btoa(URL); } }</script>                <form action='#' method='GET' onsubmit='goToPage();'>
-                    <input id="box" type="text" name='cdURL' value="" placeholder="URL" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-                    <input id="button" type="submit" value="Go!">
-                </form>
-            </div>
-            <div id="options">
-                <table style="width:100%;">
-                    <tr>
-                        <td><a onclick="document.getElementById('proxySettings').style.display = 'block';" style="cursor:pointer; color:#000; text-decoration: none;">Proxy Settings</a></td>
-                        <td><a onclick="document.getElementById('recentlyViewed').style.display = 'block';" style="position: relative;left: 17%;cursor:pointer; color:#000; text-decoration: none; text-align:center;">Recently Viewed</a></td>
-                        <td>
-                            <div style="cursor:default; color:#000; text-decoration: none; float:right;">No Cookies</div>                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div id="poweredby">Oussama infomraiotn<a href="http://free.facebook.com/ousama.info" target="blank"> من</a></div>
-    </body>
+
+<!-- Optin monster -->
+<div id="om-xenpppbq3wh9gy8qsrbf-holder"></div><script>var xenpppbq3wh9gy8qsrbf,xenpppbq3wh9gy8qsrbf_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){xenpppbq3wh9gy8qsrbf_poll(function(){if(window['om_loaded']){if(!xenpppbq3wh9gy8qsrbf){xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();return xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
+
+
+</body>
 </html>
+
+
