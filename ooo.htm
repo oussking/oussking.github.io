@@ -1,4 +1,7 @@
-
+<script>function calculateAdSize(ad, sizes) { var aw = ad.getBoundingClientRect().width; var ah = ad.getBoundingClientRect().height; if (!ad.getBoundingClientRect().width) { aw = ad.offsetWidth; ah = ad.offsetHeight; } var cs = ['','','']; for (var i = 0; i < sizes.length; i++) { var pw = sizes[i][0]; var ph = sizes[i][1]; var mw = pw-(aw<=20 ? pw : aw); var mh = ph-(ah<=20 ? ph : ah); if (cs[0]=='' || cs[1]=='') { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } if (mw==0 && mh==0 && (aw!=0 || ah!=0)) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; break; } else if (Math.abs(mw)<=Math.abs(cs[2]) && Math.abs(mh)<=Math.abs(cs[3]) && mw<50 && mh<50) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } else if ((aw>ah && pw>ph && cs[0]<cs[1]) || (ah>aw && ph>pw && cs[1]<cs[0])) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } } return cs.slice(0, -2); }</script><div id='homeAdvert' style='position: fixed; left: 15px; bottom: 10px; width:468px; height:60px;'><script>var ad = document.getElementById('homeAdvert'); var v = ''; var size = calculateAdSize(ad,[[120,600],[160,600],[250,250],[300,250],[300,600],[315,300],[468,60],[728,90]]); var ad_width = size[0], ad_height = size[1],
+    ad_idzone='2385'+(size[0]==120 ? '433' : (size[0]==160 ? '435' : (size[0]==250 ? '431' : (size.toString()==[300,250].toString() ? '395' : (size.toString()==[300,600].toString() ? '437' : (size[0]==315 ? '429' : (size[0]==468 ? '391' : (size[0]==728 ? '393' : '391'))))))));</script>
+    <script src='https://ads.exdynsrv.com/ads.js'></script><noscript><a href='http://main.exdynsrv.com/img-click.php?idzone=2385391' target='_blank'><img src='https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=2385391&output=img&type=468x60' width='468' height='60'></a></noscript></div><html>
+    <head>
         <title>Wiki ouss proxy free</title>
         <link rel="stylesheet" type="text/css" href="http://atdz.tk/ocss/ouss.css">
 	<meta name="viewport" content="width=650">
@@ -18,10 +21,7 @@
         <div id="container">
             <a href="http://free.facebook.com/ousama.info" id="header">Wiki ouss</a>
             <div id="textbox">
-                <script>function goToPage() { event.preventDefault(); var URL = document.getElementsByName('cdURL')[0].value; if (URL!='') { window.location = '?cdURL=' + btoa(URL); } }</script>                <form action='#' method='GET' onsubmit='goToPage();'>
-                    <input id="box" type="text" name='cdURL' value="" placeholder="URL" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-                    <input id="button" type="submit" value="Go!">
-                </form>
+ads
             </div>
             <div id="options">
                 <table style="width:100%;">
