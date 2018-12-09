@@ -1,103 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script>function calculateAdSize(ad, sizes) { var aw = ad.getBoundingClientRect().width; var ah = ad.getBoundingClientRect().height; if (!ad.getBoundingClientRect().width) { aw = ad.offsetWidth; ah = ad.offsetHeight; } var cs = ['','','']; for (var i = 0; i < sizes.length; i++) { var pw = sizes[i][0]; var ph = sizes[i][1]; var mw = pw-(aw<=20 ? pw : aw); var mh = ph-(ah<=20 ? ph : ah); if (cs[0]=='' || cs[1]=='') { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } if (mw==0 && mh==0 && (aw!=0 || ah!=0)) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; break; } else if (Math.abs(mw)<=Math.abs(cs[2]) && Math.abs(mh)<=Math.abs(cs[3]) && mw<50 && mh<50) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } else if ((aw>ah && pw>ph && cs[0]<cs[1]) || (ah>aw && ph>pw && cs[1]<cs[0])) { cs[0] = pw; cs[1] = ph; cs[2] = mw; cs[3] = mh; } } return cs.slice(0, -2); }</script><div id='homeAdvert' style='position: fixed; left: 15px; bottom: 10px; width:468px; height:60px;'><script>var ad = document.getElementById('homeAdvert'); var v = ''; var size = calculateAdSize(ad,[[120,600],[160,600],[250,250],[300,250],[300,600],[315,300],[468,60],[728,90]]); var ad_width = size[0], ad_height = size[1],
+    ad_idzone='2385'+(size[0]==120 ? '433' : (size[0]==160 ? '435' : (size[0]==250 ? '431' : (size.toString()==[300,250].toString() ? '395' : (size.toString()==[300,600].toString() ? '437' : (size[0]==315 ? '429' : (size[0]==468 ? '391' : (size[0]==728 ? '393' : '391'))))))));</script>
+    <script src='https://ads.exdynsrv.com/ads.js'></script><noscript><a href='http://main.exdynsrv.com/img-click.php?idzone=2385391' target='_blank'><img src='https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=2385391&output=img&type=468x60' width='468' height='60'></a></noscript></div><html>
+    <head>
+        <title>Bid.unbid.bid - Censor Dodge 1.82 BETA</title>
+        <link rel="stylesheet" type="text/css" href="http://bid.unbid.bid/plugins/surf/includes/stylesheet.css">
+	<meta name="viewport" content="width=650">
+    </head>
 
-    <title>Bolt - Coming Soon Template</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
-    <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
-    <!-- Slicknav -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
-    <!-- Off Canvas Menu -->
-    <link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">
-    <!-- Color Switcher -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vegas.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-    <!-- Main Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <!-- Responsive Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-
-  </head>
-  <body>
-
-    <div class="bg-wraper overlay has-vignette">
-      <div id="example" class="slider opacity-50 vegas-container" style="height: 983px;"></div>
-    </div>
-
-    <!-- Coundown Section Start -->
-    <section class="countdown-timer">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="heading-count">
-              <h2>WE ARE LAUNCHING IN</h2>
-            </div>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="row time-countdown justify-content-center">
-              <div id="clock" class="time-count"></div>
-            </div>
-            <p>
-            Bolt - High quality Bootstrap HTML5 Coming Soon Landing Page Template<br>
-            Comes with fully responsive layout, Cool features, and Clean design.
-            </p>
-            <div class="button-group">
-              <a href="#" class="btn btn-common">Notify Me</a>
-              <a href="#" class="btn btn-border">About Us</a>
-            </div>
-            <div class="social mt-4">
-              <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-              <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-              <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-              <a class="google" href="#"><i class="lni-google-plus"></i></a>
-            </div>
-          </div>
+    <body>
+        <div id="background"></div>
+        <div id="proxySettings" style="display:none;">
+            <span onclick="document.getElementById('proxySettings').style.display = 'none';" style="cursor:pointer; float: right;">X</span>
+            <h2 style="margin-top:0; margin-bottom:14px;">Proxy Settings:</h2>
+            <div>
+                <form style='margin-bottom:5px;' action='http://bid.unbid.bid/' method='POST'><span style="padding-right:20px;"><input type="checkbox" checked name="encryptURLs" value="1"> Encrypt URLs</span><span style="padding-right:20px;"><input type="checkbox" checked name="allowCookies" value="1"> Allow Cookies</span><span style="padding-right:20px;"><input type="checkbox"  name="stripJS" value=""> Remove Javascript</span><span style="padding-right:20px;"><input type="checkbox"  name="stripObjects" value=""> Remove Objects</span><br><input style='margin-top: 19px;' type='submit' name='updateSettings' value='Update Settings'><form action='http://bid.unbid.bid/' method='POST'><input style='margin-left: 5px;' type='submit' value='Reset' name='resetSettings'></form></form>            </div>
         </div>
-      </div>
-    </section>
-    <!-- Coundown Section End -->
 
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader" id="loader-1"></div>
-    </div>
-    <!-- End Preloader -->
+        <div id="recentlyViewed" style="display:none;">
+            <span onclick="document.getElementById('recentlyViewed').style.display = 'none';" style="cursor:pointer; float: right;">X</span>
+                        <h2 style="margin-top:0; margin-bottom:14px;">Pages Viewed Today (Total - 246 By 2 Users):</h2>
+            <div id='tableParent' style='max-height: 500px; overflow-y: auto;'><table><thead><td><b>Website</b></td><td><b>View Count</b></td></thead><tr><td style='padding-right: 80px;'>gamerevolution.com</td><td>96</td></tr><tr><td style='padding-right: 80px;'>cloudfront.net</td><td>2</td></tr><tr><td style='padding-right: 80px;'>googleapis.com</td><td>5</td></tr><tr><td style='padding-right: 80px;'>evolvemediallc.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>googletagservices.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>gstatic.com</td><td>9</td></tr><tr><td style='padding-right: 80px;'>twitch.tv</td><td>3</td></tr><tr><td style='padding-right: 80px;'>springboardplatform.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>adnxs.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>cloudflare.com</td><td>8</td></tr><tr><td style='padding-right: 80px;'>casalemedia.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>criteo.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>rubiconproject.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>undertone.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>imrworldwide.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>evolveplatform.net</td><td>1</td></tr><tr><td style='padding-right: 80px;'>scorecardresearch.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>criteo.net</td><td>2</td></tr><tr><td style='padding-right: 80px;'>altervista.org</td><td>11</td></tr><tr><td style='padding-right: 80px;'>googletagmanager.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>google-analytics.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>youtube.com</td><td>11</td></tr><tr><td style='padding-right: 80px;'>googlevideo.com</td><td>2</td></tr><tr><td style='padding-right: 80px;'>ggpht.com</td><td>4</td></tr><tr><td style='padding-right: 80px;'>ytimg.com</td><td>19</td></tr><tr><td style='padding-right: 80px;'>google.com</td><td>1</td></tr><tr><td style='padding-right: 80px;'>doubleclick.net</td><td>1</td></tr><tr><td style='padding-right: 80px;'>tclhosting.com</td><td>53</td></tr></table></div>        </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/vegas.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/jquery.nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script> 
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.min.js"></script>
-
-    <script type="text/javascript">
-      $("#example").vegas({
-          timer: false,
-          delay: 6000,
-          transitionDuration: 2000,
-          transition: "blur",
-          slides: [
-              { src: "assets/img/slide1.jpg" },
-              { src: "assets/img/slide2.jpg" },
-              { src: "assets/img/slide3.jpg" }
-          ]
-      });
-    </script>
-      
-  </body>
+        <div id="container">
+            <a href="http://bid.unbid.bid/" id="header">Bid.unbid.bid</a>
+            <div id="textbox">
+                <script>function goToPage() { event.preventDefault(); var URL = document.getElementsByName('cdURL')[0].value; if (URL!='') { window.location = '?cdURL=' + btoa(URL); } }</script>                <form action='#' method='GET' onsubmit='goToPage();'>
+                    <input id="box" type="text" name='cdURL' value="" placeholder="URL" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="button" type="submit" value="Go!">
+                </form>
+            </div>
+            <div id="options">
+                <table style="width:100%;">
+                    <tr>
+                        <td><a onclick="document.getElementById('proxySettings').style.display = 'block';" style="cursor:pointer; color:#000; text-decoration: none;">Proxy Settings</a></td>
+                        <td><a onclick="document.getElementById('recentlyViewed').style.display = 'block';" style="position: relative;left: 17%;cursor:pointer; color:#000; text-decoration: none; text-align:center;">Recently Viewed</a></td>
+                        <td>
+                            <div style="cursor:default; color:#000; text-decoration: none; float:right;">No Cookies</div>                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="poweredby">Powered By <a href="http://censordodge.com" target="blank">Censor Dodge V1.82 BETA</a></div>
+    </body>
 </html>
