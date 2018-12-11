@@ -172,3 +172,24 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+    .oussama{
+    border 1 px solid  #ffff33;
+    padding: 30px
+    color:#ffff33;
+    background: #d1d1ee;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-size: 25px;
+    
+    }
+    .oussama:hover{
+    border 1 px solid  #96FF33;
+    padding: 30px
+    color:#700;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-size: 25px;
+    
+    }
